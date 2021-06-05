@@ -1,0 +1,83 @@
+@import "./layouts/reset";
+@import "./base/fonts";
+@import "./utils/variables";
+@import "./utils/keyframes";
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    padding-bottom: 30px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 60%); 
+    box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px $primaryColor;
+    .porsche{
+        background: url("../images/porsche.png") center/cover;
+        width: 125px;
+        height: 100px;
+    }
+    h1{
+        font-family: "birdsOfParadise";
+        font-size: 2.5rem;
+        color: $primaryColor;
+        text-shadow: 2px 1px 1px black;
+        margin-top: 50px;
+    }
+    .mustang{
+        background: url("../images/mustang.png") bottom/cover;
+        width: 100px;
+        height: 80px;
+        margin-top: 20px;
+    }
+    @media  (max-width: 360px) {
+        .mustang, .porsche{
+            display: none;
+        }
+    }
+}
+.presentation{
+    text-align: center;
+    padding: 10px 0; 
+    box-shadow: 0px 3px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255,126,51,0.5);
+    line-height: 1.4rem;
+    p{
+        text-shadow: 2px 1px 1px $primaryColor;
+    }
+}
+.crashCar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    &:hover{
+        .fa-car-side{
+            animation: crashCarBlack 2.5s ease-in-out both 1;
+        }
+        .carColor{
+            animation: crashCarOrange 0.1s both 2.5s ;
+        }
+        .carColorRed{
+            animation: crashCarRed 2.5s  1  both;
+        }
+        
+    }
+    .fas{
+        font-size: 2rem;
+    }
+    .carColor{
+        color: $primaryColor;
+        position: absolute;
+        right: 0;
+    }
+    .carColorRed{
+        color: red;
+        opacity: 0;
+    }
+}
+
