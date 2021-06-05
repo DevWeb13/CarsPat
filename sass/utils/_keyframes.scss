@@ -1,0 +1,34 @@
+@keyframes crashCarBlack {
+    0%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(125px);
+    }
+    100%{
+        transform: translateX(304px);
+    }
+}
+
+@keyframes crashCarOrange {
+    0%{
+       opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes crashCarRed {
+    0%{
+        opacity: 0;
+    }
+    99.9%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "birdsOfParadise";
+  src: url("../../policeBirdsOfParadiseCarsPat/Birds of Paradise ╕ PERSONAL USE ONLY.ttf");
+}
+@keyframes crashCarBlack {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(125px);
+  }
+  100% {
+    transform: translateX(304px);
+  }
+}
+@keyframes crashCarOrange {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes crashCarRed {
+  0% {
+    opacity: 0;
+  }
+  99.9% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  padding-bottom: 30px;
+  background: black;
+  background: radial-gradient(circle, black 0%, white 0%, black 60%);
+  box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #e18739;
+}
+header .porsche {
+  background: url("../images/porsche.png") center/cover;
+  width: 125px;
+  height: 100px;
+}
+header h1 {
+  font-family: "birdsOfParadise";
+  font-size: 2.5rem;
+  color: #e18739;
+  text-shadow: 2px 1px 1px black;
+  margin-top: 50px;
+}
+header .mustang {
+  background: url("../images/mustang.png") bottom/cover;
+  width: 100px;
+  height: 80px;
+  margin-top: 20px;
+}
+@media (max-width: 360px) {
+  header .mustang, header .porsche {
+    display: none;
+  }
+}
+
+.presentation {
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px 3px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255, 126, 51, 0.5);
+  line-height: 1.4rem;
+}
+.presentation p {
+  text-shadow: 2px 1px 1px #e18739;
+}
+
+.crashCar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.crashCar:hover .fa-car-side {
+  animation: crashCarBlack 2.5s ease-in-out both 1;
+}
+.crashCar:hover .carColor {
+  animation: crashCarOrange 0.1s both 2.5s;
+}
+.crashCar:hover .carColorRed {
+  animation: crashCarRed 2.5s 1 both;
+}
+.crashCar .fas {
+  font-size: 2rem;
+}
+.crashCar .carColor {
+  color: #e18739;
+  position: absolute;
+  right: 0;
+}
+.crashCar .carColorRed {
+  color: red;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
