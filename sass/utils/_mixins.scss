@@ -1,0 +1,14 @@
+@mixin crashCarAnimations {
+    p{
+        animation: crashCarText $crashCarAnimationTime 0.1s ease-in  1 both;
+    }
+    .fa-car-side{
+        animation: crashCarBlack $crashCarAnimationTime ease-in  1 both;
+    }
+    .carColor{
+        animation: crashCarOrange 0.1s  $crashCarAnimationTime both;
+    }
+    .carColorRed{
+        animation: crashCarRed $crashCarAnimationTime  1  both ;
+    }
+}
