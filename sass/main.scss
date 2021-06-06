@@ -2,10 +2,11 @@
 @import "./base/fonts";
 @import "./utils/variables";
 @import "./utils/keyframes";
+@import "./utils/mixins";
 
 a{
     text-decoration: none;
-    color: black;
+    color: $secondaryColor;
 }
 
 header{
@@ -20,15 +21,22 @@ header{
     box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px $primaryColor;
     .porsche{
         background: url("../images/porsche.png") center/cover;
-        width: 125px;
+        width: 120px;
         height: 100px;
     }
     h1{
-        font-family: "birdsOfParadise";
+        font-family: $birdsPolicy;
         font-size: 2.5rem;
         color: $primaryColor;
         text-shadow: 2px 1px 1px black;
         margin-top: 50px;
+        @media (min-width: 765px) {
+            font-size: 5rem;
+        }
+        @media (min-width: 1000px) {
+            font-size: 7.5rem;
+            padding-top: 20px;
+        }
     }
     .mustang{
         background: url("../images/mustang.png") bottom/cover;
@@ -43,32 +51,105 @@ header{
     }
 }
 .presentation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 10px 0; 
-    box-shadow: 0px 3px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255,126,51,0.5);
+    padding: 10px 0 0 0; 
+    box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255,126,51,0.5);
     line-height: 1.4rem;
+    height: 135px;
+    &:hover{
+        + .crashCar{
+            @include crashCarAnimations;
+        }
+        a{
+            animation: buzzOut 0.4s  1s 1  backwards;
+        }
+    }
+    .leftWideBand{
+        clip-path: polygon(0 15%, 100% 100%, 30% 100%, 0 50%);
+        background: $primaryColor;
+        height: 135px;
+        width: 30%;
+        position: relative;
+        @media  (max-width: 600px){
+            display: none;
+        }
+        .leftThinBand{
+            clip-path: polygon(0 37%, 43% 100%, 40% 100%, 0 40%);
+            background: white;
+            height: 135px;
+            width: 100%;
+            position: absolute;
+        }
+        
+    }
     p{
         text-shadow: 2px 1px 1px $primaryColor;
+        margin: auto;
+        .fas, .far{
+            text-shadow: none;
+        }
+        a{
+            width: max-content;
+            margin: auto;
+            display: block;
+            transform: scale(1);
+            transition: transform 0.3s;
+            
+            &:hover{
+                transform: scale(1.2);
+            }
+            &:focus{
+                transform: scale(1);
+            }
+        }
+    }
+    .rightWideBand{
+        clip-path: polygon(100% 50%, 100% 70%, 70% 100%, 0 100%);
+        background: $primaryColor;
+        height: 135px;
+        width: 30%;
+        position: relative;
+        @media  (max-width: 600px){
+            display: none;
+        }
+        .rightThinBand{
+            clip-path: polygon(100% 63%, 100% 65%, 64% 100%, 60% 100%);
+            background: white;
+            height: 135px;
+            width: 100%;
+            position: absolute;
+            
+            
+        }
     }
 }
 .crashCar{
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
-    &:hover{
-        .fa-car-side{
-            animation: crashCarBlack 2.5s ease-in-out both 1;
-        }
-        .carColor{
-            animation: crashCarOrange 0.1s both 2.5s ;
-        }
-        .carColorRed{
-            animation: crashCarRed 2.5s  1  both;
-        }
-        
+    position: relative;
+    margin: auto;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 60%);
+    p{
+        font-size: 0.8rem;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-left: 2.5%;
     }
     .fas{
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    .fa-car-side{
+        position: absolute;
+        left: 0;
     }
     .carColor{
         color: $primaryColor;
@@ -79,5 +160,37 @@ header{
         color: red;
         opacity: 0;
     }
+}
+
+section{
+    text-align: center;
+    .imageBackground{
+        background: url("../images/95484828_118968113120667_8879041321868722176_n.jpg") center/cover ;
+        height: 100vh;
+        
+        h2{
+            
+            color: white;
+            font-size: 2rem;
+            padding: 25px 0;
+            background:  $secondaryColorLight;
+            border-radius: 15px;
+            padding: 15px;
+            border: 5px solid $primaryColor;
+            margin: 0 5% 20px 5%;
+        }
+        p{
+            color: white;
+            width: 75%;
+            margin: auto;
+            background: $secondaryColorLight;
+            border-radius: 15px;
+            padding: 15px;
+            border: 2.5px solid $primaryColor;
+            font-size: 1.5rem;
+        }
+        
+    }
+    
 }
 

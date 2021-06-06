@@ -1,12 +1,19 @@
+@keyframes crashCarText{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+        
+    }
+}
+
 @keyframes crashCarBlack {
     0%{
         transform: translateX(0);
     }
-    40%{
-        transform: translateX(125px);
-    }
     100%{
-        transform: translateX(304px);
+        transform: translateX(calc(100vw - 48px));
     }
 }
 
@@ -24,11 +31,55 @@
     0%{
         opacity: 0;
     }
-    99.9%{
+    99%{
         opacity: 0;
     }
     100%{
         opacity: 100%;
     }
-    
 }
+
+@keyframes buzzOut{
+    10% {
+        
+        transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+        
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+        
+        transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+        
+        transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+        
+        transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+        
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+        
+        transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+        
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+        
+        transform: translateX(1px) rotate(0);
+    }
+    100% {
+        
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+
