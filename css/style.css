@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -69,7 +70,7 @@ table {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw - 48px));
+    transform: translateX(calc(100vw - 35px));
   }
 }
 @keyframes crashCarOrange {
@@ -129,6 +130,7 @@ a {
   color: black;
 }
 
+/* *********************** HEADER *********************** */
 header {
   display: flex;
   align-content: center;
@@ -152,7 +154,7 @@ header h1 {
   text-shadow: 2px 1px 1px black;
   margin-top: 50px;
 }
-@media (min-width: 765px) {
+@media (min-width: 750px) {
   header h1 {
     font-size: 5rem;
   }
@@ -175,15 +177,17 @@ header .mustang {
   }
 }
 
+/* *********************** .PRESENTATION **************** */
 .presentation {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  padding: 10px 0 0 0;
   box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255, 126, 51, 0.5);
   line-height: 1.4rem;
-  height: 135px;
+  height: 150px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #e18739;
 }
 .presentation:hover + .crashCar p {
   animation: crashCarText 1s 0.1s ease-in 1 both;
@@ -197,7 +201,7 @@ header .mustang {
 .presentation:hover + .crashCar .carColorRed {
   animation: crashCarRed 1s 1 both;
 }
-.presentation:hover a {
+.presentation:hover a, .presentation:hover i {
   animation: buzzOut 0.4s 1s 1 backwards;
 }
 .presentation .leftWideBand {
@@ -220,10 +224,23 @@ header .mustang {
   position: absolute;
 }
 .presentation p {
-  text-shadow: 2px 1px 1px #e18739;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   margin: auto;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .presentation p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1000px) {
+  .presentation p {
+    font-size: 1.6rem;
+  }
 }
 .presentation p .fas, .presentation p .far {
+  color: black;
   text-shadow: none;
 }
 .presentation p a {
@@ -232,6 +249,7 @@ header .mustang {
   display: block;
   transform: scale(1);
   transition: transform 0.3s;
+  color: #e18739;
 }
 .presentation p a:hover {
   transform: scale(1.2);
@@ -259,6 +277,7 @@ header .mustang {
   position: absolute;
 }
 
+/* ********************** .CRASHCAR ********************** */
 .crashCar {
   display: flex;
   justify-content: space-between;
@@ -295,32 +314,106 @@ header .mustang {
   opacity: 0;
 }
 
-section {
+/* ********************* NAV ***************************** */
+nav #side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #e18739;
+  left: -300px;
+  /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
+  transition: 0.5s ease-out;
+  /*Affiche side-bar en 0.5s (ease-out=lent vers la fin).*/
+  z-index: 4;
+  /*La side-bar passe devant tout les élèments.*/
+  border: 5px solid white;
+}
+nav #side-bar .toggle-button {
+  position: absolute;
+  top: 30px;
+  left: 310px;
+  /*Place le bouton au bon endroit.*/
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+nav #side-bar .toggle-button span {
+  /*Il y a 3 <span> qui permettent de créer la forme du bouton.(hamburger)*/
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #e18739;
+  display: block;
+  margin-top: 4px;
+  /*Permet de 'decoller' les 3 <span> afin de creer les 3 traits.*/
+  transition: 0.5s ease;
+  /*ease=lentement.*/
+}
+nav #side-bar li {
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 25px;
+  text-transform: uppercase;
   text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border: 2px solid #e18739;
+  transition: all 1s;
+  margin-bottom: 10px;
+  transform: scale(1);
 }
-section .imageBackground {
-  background: url("../images/95484828_118968113120667_8879041321868722176_n.jpg") center/cover;
-  height: 100vh;
+nav #side-bar li:hover {
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transform: scale(1.05);
 }
-section .imageBackground h2 {
+nav #side-bar li:hover a {
+  color: black;
+}
+nav #side-bar li a {
   color: white;
-  font-size: 2rem;
-  padding: 25px 0;
-  background: rgba(0, 0, 0, 0.705);
-  border-radius: 15px;
-  padding: 15px;
-  border: 5px solid #e18739;
-  margin: 0 5% 20px 5%;
+  transition: all 1s;
 }
-section .imageBackground p {
-  color: white;
-  width: 75%;
+nav #side-bar .porscheBleu {
+  background: url("../images/porscheBleu-removebg-preview.png") center/cover;
+  height: 100px;
+  width: 200px;
   margin: auto;
-  background: rgba(0, 0, 0, 0.705);
-  border-radius: 15px;
-  padding: 15px;
-  border: 2.5px solid #e18739;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
+}
+nav #side-bar.active {
+  left: 0;
+  /*Quand la class='active' est activé on annule le 'left: -300px;' ce qui permet d'afficher la side-bar.*/
+}
+nav #side-bar.active .toggle-button {
+  top: 2.8rem;
+  left: 235px;
+}
+nav #side-bar.active .toggle-button span {
+  position: absolute;
+}
+nav #side-bar.active .toggle-button span:nth-child(1) {
+  transform: rotate(45deg);
+  /*Permet de tourner la barre du haut de 45 degrés quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button span:nth-child(2) {
+  opacity: 0;
+  /*Permet de faire disparaitre la barre du milieu quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button span:nth-child(3) {
+  transform: rotate(-45deg);
+  /*Permet de tourner la barre du bas de -45 degrés quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button ~ .content {
+  /*Contenu de la page*/
+  opacity: 0.3;
+  /*Sombre le contenu de la page quand la class='active' est activée.*/
+}
+
+/* ********************* SECTION ************************* */
+section .imageBackground {
+  background: url("../images/porscheRougeAvecFond.jpg") center/cover;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
