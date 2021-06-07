@@ -129,6 +129,7 @@ a {
   color: black;
 }
 
+/* *********************** HEADER *********************** */
 header {
   display: flex;
   align-content: center;
@@ -175,6 +176,7 @@ header .mustang {
   }
 }
 
+/* *********************** .PRESENTATION **************** */
 .presentation {
   display: flex;
   align-items: center;
@@ -259,6 +261,7 @@ header .mustang {
   position: absolute;
 }
 
+/* ********************** .CRASHCAR ********************** */
 .crashCar {
   display: flex;
   justify-content: space-between;
@@ -295,32 +298,10 @@ header .mustang {
   opacity: 0;
 }
 
-section {
-  text-align: center;
-}
+/* ********************* SECTION ************************* */
 section .imageBackground {
   background: url("../images/95484828_118968113120667_8879041321868722176_n.jpg") center/cover;
   height: 100vh;
-}
-section .imageBackground h2 {
-  color: white;
-  font-size: 2rem;
-  padding: 25px 0;
-  background: rgba(0, 0, 0, 0.705);
-  border-radius: 15px;
-  padding: 15px;
-  border: 5px solid #e18739;
-  margin: 0 5% 20px 5%;
-}
-section .imageBackground p {
-  color: white;
-  width: 75%;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.705);
-  border-radius: 15px;
-  padding: 15px;
-  border: 2.5px solid #e18739;
-  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
