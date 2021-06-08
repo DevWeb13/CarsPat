@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "birdsOfParadise";
+  src: url("../policeBirdsOfParadiseCarsPat/birdsOfParadise.ttf");
+}
+@-webkit-keyframes crashCarText {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes crashCarText {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes crashCarBlack {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(100vw - 35px));
+            transform: translateX(calc(100vw - 35px));
+  }
+}
+@keyframes crashCarBlack {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(100vw - 35px));
+            transform: translateX(calc(100vw - 35px));
+  }
+}
+@-webkit-keyframes crashCarOrange {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes crashCarOrange {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes crashCarRed {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes crashCarRed {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@-webkit-keyframes buzzOut {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+            transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+            transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+            transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+            transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+            transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+            transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+            transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+            transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+            transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+            transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes buzzOut {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+            transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+            transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+            transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+            transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+            transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+            transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+            transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+            transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+            transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+            transform: translateX(-1px) rotate(0);
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* *********************** HEADER *********************** */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100px;
+  padding-bottom: 30px;
+  background: black;
+  background: -o-radial-gradient(circle, black 0%, white 0%, black 60%);
+  background: radial-gradient(circle, black 0%, white 0%, black 60%);
+  -webkit-box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #e18739;
+          box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #e18739;
+}
+header .porsche {
+  background: url("../images/porsche.png") center/cover;
+  width: 120px;
+  height: 100px;
+}
+header h1 {
+  font-family: "birdsOfParadise", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5rem;
+  color: #e18739;
+  text-shadow: 2px 1px 1px black;
+  margin-top: 50px;
+}
+@media (min-width: 750px) {
+  header h1 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1000px) {
+  header h1 {
+    font-size: 7.5rem;
+    padding-top: 20px;
+  }
+}
+header .mustang {
+  background: url("../images/mustang.png") bottom/cover;
+  width: 100px;
+  height: 80px;
+  margin-top: 20px;
+}
+@media (max-width: 360px) {
+  header .mustang, header .porsche {
+    display: none;
+  }
+}
+
+/* *********************** .PRESENTATION **************** */
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255, 126, 51, 0.5);
+          box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255, 126, 51, 0.5);
+  line-height: 1.4rem;
+  height: 150px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #e18739;
+}
+.presentation:hover + .crashCar p {
+  -webkit-animation: crashCarText 1s 0.1s ease-in 1 both;
+          animation: crashCarText 1s 0.1s ease-in 1 both;
+}
+.presentation:hover + .crashCar .fa-car-side {
+  -webkit-animation: crashCarBlack 1s ease-in 1 both;
+          animation: crashCarBlack 1s ease-in 1 both;
+}
+.presentation:hover + .crashCar .carColor {
+  -webkit-animation: crashCarOrange 0.1s 1s both;
+          animation: crashCarOrange 0.1s 1s both;
+}
+.presentation:hover + .crashCar .carColorRed {
+  -webkit-animation: crashCarRed 1s 1 both;
+          animation: crashCarRed 1s 1 both;
+}
+.presentation:hover a, .presentation:hover i {
+  -webkit-animation: buzzOut 0.4s 1s 1 backwards;
+          animation: buzzOut 0.4s 1s 1 backwards;
+}
+.presentation .leftWideBand {
+  -webkit-clip-path: polygon(0 15%, 100% 100%, 30% 100%, 0 50%);
+          clip-path: polygon(0 15%, 100% 100%, 30% 100%, 0 50%);
+  background: #e18739;
+  height: 135px;
+  width: 30%;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .presentation .leftWideBand {
+    display: none;
+  }
+}
+.presentation .leftWideBand .leftThinBand {
+  -webkit-clip-path: polygon(0 37%, 43% 100%, 40% 100%, 0 40%);
+          clip-path: polygon(0 37%, 43% 100%, 40% 100%, 0 40%);
+  background: white;
+  height: 135px;
+  width: 100%;
+  position: absolute;
+}
+.presentation p {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .presentation p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1000px) {
+  .presentation p {
+    font-size: 1.6rem;
+  }
+}
+.presentation p .fas, .presentation p .far {
+  color: black;
+  text-shadow: none;
+}
+.presentation p a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  display: block;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  color: #e18739;
+}
+.presentation p a:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.presentation p a:focus {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.presentation .rightWideBand {
+  -webkit-clip-path: polygon(100% 50%, 100% 70%, 70% 100%, 0 100%);
+          clip-path: polygon(100% 50%, 100% 70%, 70% 100%, 0 100%);
+  background: #e18739;
+  height: 135px;
+  width: 30%;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .presentation .rightWideBand {
+    display: none;
+  }
+}
+.presentation .rightWideBand .rightThinBand {
+  -webkit-clip-path: polygon(100% 63%, 100% 65%, 64% 100%, 60% 100%);
+          clip-path: polygon(100% 63%, 100% 65%, 64% 100%, 60% 100%);
+  background: white;
+  height: 135px;
+  width: 100%;
+  position: absolute;
+}
+
+/* ********************** .CRASHCAR ********************** */
+.crashCar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  position: relative;
+  margin: auto;
+  background: white;
+  background: -o-radial-gradient(circle, white 0%, black 0%, white 60%);
+  background: radial-gradient(circle, white 0%, black 0%, white 60%);
+}
+.crashCar p {
+  font-size: 0.8rem;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 2.5%;
+}
+.crashCar .fas {
+  font-size: 1rem;
+}
+.crashCar .fa-car-side {
+  position: absolute;
+  left: 0;
+}
+.crashCar .carColor {
+  color: #e18739;
+  position: absolute;
+  right: 0;
+}
+.crashCar .carColorRed {
+  color: red;
+  opacity: 0;
+}
+
+/* ********************* NAV ***************************** */
+nav #side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #e18739;
+  left: -300px;
+  /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
+  -webkit-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  /*Affiche side-bar en 0.5s (ease-out=lent vers la fin).*/
+  z-index: 4;
+  /*La side-bar passe devant tout les élèments.*/
+  border: 5px solid white;
+}
+nav #side-bar .toggle-button {
+  position: absolute;
+  top: 30px;
+  left: 310px;
+  /*Place le bouton au bon endroit.*/
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+nav #side-bar .toggle-button span {
+  /*Il y a 3 <span> qui permettent de créer la forme du bouton.(hamburger)*/
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #e18739;
+  display: block;
+  margin-top: 4px;
+  /*Permet de 'decoller' les 3 <span> afin de creer les 3 traits.*/
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  /*ease=lentement.*/
+}
+nav #side-bar li {
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border: 2px solid #e18739;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  margin-bottom: 10px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+nav #side-bar li:hover {
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+nav #side-bar li:hover a {
+  color: black;
+}
+nav #side-bar li a {
+  color: white;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+nav #side-bar .porscheBleu {
+  background: url("../images/porscheBleu-removebg-preview.png") center/cover;
+  height: 100px;
+  width: 200px;
+  margin: auto;
+  font-size: 0.5rem;
+}
+nav #side-bar.active {
+  left: 0;
+  /*Quand la class='active' est activé on annule le 'left: -300px;' ce qui permet d'afficher la side-bar.*/
+}
+nav #side-bar.active .toggle-button {
+  top: 2.8rem;
+  left: 235px;
+}
+nav #side-bar.active .toggle-button span {
+  position: absolute;
+}
+nav #side-bar.active .toggle-button span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /*Permet de tourner la barre du haut de 45 degrés quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button span:nth-child(2) {
+  opacity: 0;
+  /*Permet de faire disparaitre la barre du milieu quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /*Permet de tourner la barre du bas de -45 degrés quand on active la Sidebar.*/
+}
+nav #side-bar.active .toggle-button ~ .content {
+  /*Contenu de la page*/
+  opacity: 0.3;
+  /*Sombre le contenu de la page quand la class='active' est activée.*/
+}
+
+/* ********************* SECTION ************************* */
+section .imageBackground {
+  background: url("../images/porscheRougeAvecFond.jpg") center/cover;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2Nzcy9zdHlsZS5jc3MiLCIuLi9zYXNzL2xheW91dHMvX3Jlc2V0LnNjc3MiLCIuLi9zYXNzL2Jhc2UvX2ZvbnRzLnNjc3MiLCIuLi9zYXNzL3V0aWxzL19rZXlmcmFtZXMuc2NzcyIsIi4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc2Fzcy91dGlscy9fdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzL3V0aWxzL19taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7OztDQUFBO0FBS0E7Ozs7Ozs7Ozs7Ozs7RUFhQyxTQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtFQUNBLHdCQUFBO0FEQ0Q7O0FDQ0EsZ0RBQUE7QUFDQTs7RUFFQyxjQUFBO0FERUQ7O0FDQUE7RUFDQyxjQUFBO0FER0Q7O0FDREE7RUFDQyxnQkFBQTtBRElEOztBQ0ZBO0VBQ0MsWUFBQTtBREtEOztBQ0hBOztFQUVDLFdBQUE7RUFDQSxhQUFBO0FETUQ7O0FDSkE7RUFDQyx5QkFBQTtFQUNBLGlCQUFBO0FET0Q7O0FFckRBO0VBQ0ksOEJBQUE7RUFDQSwrREFBQTtBRndESjtBRzFEQTtFQUNJO0lBQ0ksUUFBQTtFSDRETjtFRzFERTtJQUNJLFdBQUE7RUg0RE47QUFDRjtBR2xFQTtFQUNJO0lBQ0ksUUFBQTtFSDRETjtFRzFERTtJQUNJLFdBQUE7RUg0RE47QUFDRjtBR3hEQTtFQUNJO0lBQ0ksZ0NBQUE7WUFBQSx3QkFBQTtFSDBETjtFR3hERTtJQUNJLGlEQUFBO1lBQUEseUNBQUE7RUgwRE47QUFDRjtBR2hFQTtFQUNJO0lBQ0ksZ0NBQUE7WUFBQSx3QkFBQTtFSDBETjtFR3hERTtJQUNJLGlEQUFBO1lBQUEseUNBQUE7RUgwRE47QUFDRjtBR3ZEQTtFQUNJO0lBQ0csYUFBQTtFSHlETDtFR3ZERTtJQUNJLFVBQUE7SUFDQSxhQUFBO0VIeUROO0FBQ0Y7QUdoRUE7RUFDSTtJQUNHLGFBQUE7RUh5REw7RUd2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 */
