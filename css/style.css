@@ -127,7 +127,7 @@ table {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #1f1f1f;
 }
 
 /* *********************** HEADER *********************** */
@@ -138,9 +138,9 @@ header {
   justify-content: space-around;
   height: 100px;
   padding-bottom: 30px;
-  background: black;
-  background: radial-gradient(circle, black 0%, white 0%, black 60%);
-  box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #e18739;
+  background: white;
+  background: radial-gradient(circle, white 0%, black 0%, white 60%);
+  box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #f9212e;
 }
 header .porsche {
   background: url("../images/porsche.png") center/cover;
@@ -150,8 +150,8 @@ header .porsche {
 header h1 {
   font-family: "birdsOfParadise", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.5rem;
-  color: #e18739;
-  text-shadow: 2px 1px 1px black;
+  color: #f9212e;
+  text-shadow: 2px 1px 1px white;
   margin-top: 50px;
 }
 @media (min-width: 750px) {
@@ -165,14 +165,14 @@ header h1 {
     padding-top: 20px;
   }
 }
-header .mustang {
-  background: url("../images/mustang.png") bottom/cover;
-  width: 100px;
+header .harley {
+  background: url("../images/Harley-removebg-preview.png") bottom/cover;
+  width: 125px;
   height: 80px;
-  margin-top: 20px;
+  margin-top: 45px;
 }
-@media (max-width: 360px) {
-  header .mustang, header .porsche {
+@media (max-width: 374px) {
+  header .harley, header .porsche {
     display: none;
   }
 }
@@ -183,11 +183,12 @@ header .mustang {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px rgba(255, 126, 51, 0.5);
-  line-height: 1.4rem;
-  height: 150px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #e18739;
+  letter-spacing: 3px;
+  box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px #f9212e;
+  line-height: 2rem;
+  height: 200px;
+  font-family: Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  color: #f9212e;
 }
 .presentation:hover + .crashCar p {
   animation: crashCarText 1s 0.1s ease-in 1 both;
@@ -206,8 +207,8 @@ header .mustang {
 }
 .presentation .leftWideBand {
   clip-path: polygon(0 15%, 100% 100%, 30% 100%, 0 50%);
-  background: #e18739;
-  height: 135px;
+  background: #f9212e;
+  height: 100%;
   width: 30%;
   position: relative;
 }
@@ -219,7 +220,7 @@ header .mustang {
 .presentation .leftWideBand .leftThinBand {
   clip-path: polygon(0 37%, 43% 100%, 40% 100%, 0 40%);
   background: white;
-  height: 135px;
+  height: 100%;
   width: 100%;
   position: absolute;
 }
@@ -240,7 +241,7 @@ header .mustang {
   }
 }
 .presentation p .fas, .presentation p .far {
-  color: black;
+  color: #1f1f1f;
   text-shadow: none;
 }
 .presentation p a {
@@ -249,7 +250,7 @@ header .mustang {
   display: block;
   transform: scale(1);
   transition: transform 0.3s;
-  color: #e18739;
+  color: #f9212e;
 }
 .presentation p a:hover {
   transform: scale(1.2);
@@ -259,8 +260,8 @@ header .mustang {
 }
 .presentation .rightWideBand {
   clip-path: polygon(100% 50%, 100% 70%, 70% 100%, 0 100%);
-  background: #e18739;
-  height: 135px;
+  background: #f9212e;
+  height: 100%;
   width: 30%;
   position: relative;
 }
@@ -272,7 +273,7 @@ header .mustang {
 .presentation .rightWideBand .rightThinBand {
   clip-path: polygon(100% 63%, 100% 65%, 64% 100%, 60% 100%);
   background: white;
-  height: 135px;
+  height: 100%;
   width: 100%;
   position: absolute;
 }
@@ -282,20 +283,23 @@ header .mustang {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  position: relative;
-  margin: auto;
   background: white;
   background: radial-gradient(circle, white 0%, black 0%, white 60%);
+  border-bottom: 2px solid #1f1f1f;
+  align-items: center;
 }
 .crashCar p {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
   font-weight: bold;
-  margin-left: 2.5%;
+  margin: 0 0 7px 2.5%;
+  color: #f9212e;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
 }
 .crashCar .fas {
   font-size: 1rem;
@@ -305,12 +309,12 @@ header .mustang {
   left: 0;
 }
 .crashCar .carColor {
-  color: #e18739;
+  color: #1f1f1f;
   position: absolute;
   right: 0;
 }
 .crashCar .carColorRed {
-  color: red;
+  color: #f9212e;
   opacity: 0;
 }
 
@@ -319,7 +323,7 @@ nav #side-bar {
   position: absolute;
   width: 230px;
   height: 100%;
-  background: #e18739;
+  background: #f9212e;
   left: -300px;
   /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
   transition: 0.5s ease-out;
@@ -342,7 +346,7 @@ nav #side-bar .toggle-button span {
   width: 60px;
   height: 10px;
   border-radius: 5px;
-  background: #e18739;
+  background: #f9212e;
   display: block;
   margin-top: 4px;
   /*Permet de 'decoller' les 3 <span> afin de creer les 3 traits.*/
@@ -356,19 +360,19 @@ nav #side-bar li {
   text-transform: uppercase;
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  border: 2px solid #e18739;
+  border: 2px solid #f9212e;
   transition: all 1s;
   margin-bottom: 10px;
   transform: scale(1);
 }
 nav #side-bar li:hover {
   background: white;
-  border: 2px solid black;
+  border: 2px solid #1f1f1f;
   border-radius: 50%;
   transform: scale(1.05);
 }
 nav #side-bar li:hover a {
-  color: black;
+  color: #1f1f1f;
 }
 nav #side-bar li a {
   color: white;
