@@ -57,6 +57,10 @@ table {
   font-family: "birdsOfParadise";
   src: url("../policeBirdsOfParadiseCarsPat/birdsOfParadise.ttf");
 }
+@font-face {
+  font-family: "impactLabelReversed";
+  src: url("../policeImpactLabel/Impact_Label_Reversed.ttf");
+}
 @keyframes crashCarText {
   0% {
     width: 0;
@@ -138,14 +142,25 @@ header {
   justify-content: space-around;
   height: 100px;
   padding-bottom: 30px;
-  background: white;
-  background: radial-gradient(circle, white 0%, black 0%, white 60%);
-  box-shadow: 0px 3px 13px -7px #000000, 0px 2px 1px 1px #f9212e;
+  background: linear-gradient(90deg, white 15%, #1f1f1f 50%, #f9212e 85%);
+  border-bottom: 3px solid rgba(31, 31, 31, 0.75);
 }
 header .porsche {
   background: url("../images/porsche.png") center/cover;
   width: 120px;
   height: 100px;
+}
+@media (min-width: 750px) {
+  header .porsche {
+    width: 150px;
+    height: 120px;
+  }
+}
+@media (min-width: 1000px) {
+  header .porsche {
+    width: 175px;
+    height: 130px;
+  }
 }
 header h1 {
   font-family: "birdsOfParadise", Verdana, Geneva, Tahoma, sans-serif;
@@ -171,6 +186,18 @@ header .harley {
   height: 80px;
   margin-top: 45px;
 }
+@media (min-width: 750px) {
+  header .harley {
+    width: 150px;
+    height: 100px;
+  }
+}
+@media (min-width: 1000px) {
+  header .harley {
+    width: 190px;
+    height: 130px;
+  }
+}
 @media (max-width: 374px) {
   header .harley, header .porsche {
     display: none;
@@ -183,12 +210,11 @@ header .harley {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  letter-spacing: 3px;
-  box-shadow: 0px 0px 13px -7px #000000, inset 0px -11px 1px -8px #f9212e;
   line-height: 2rem;
   height: 200px;
-  font-family: Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  font-family: "impactLabelReversed", sans-serif;
   color: #f9212e;
+  border-top: 3px solid #f9212e;
 }
 .presentation:hover + .crashCar p {
   animation: crashCarText 1s 0.1s ease-in 1 both;
@@ -225,19 +251,21 @@ header .harley {
   position: absolute;
 }
 .presentation p {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   margin: auto;
   text-transform: uppercase;
+  font-weight: 1000;
   font-size: 1.2rem;
 }
 @media (min-width: 750px) {
   .presentation p {
     font-size: 1.4rem;
+    letter-spacing: 2px;
   }
 }
 @media (min-width: 1000px) {
   .presentation p {
     font-size: 1.6rem;
+    letter-spacing: 3px;
   }
 }
 .presentation p .fas, .presentation p .far {
@@ -285,7 +313,8 @@ header .harley {
   padding-top: 10px;
   background: white;
   background: radial-gradient(circle, white 0%, black 0%, white 60%);
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 3px solid #f9212e;
+  border-top: 3px solid #f9212e;
   align-items: center;
 }
 .crashCar p {
@@ -354,12 +383,13 @@ nav #side-bar .toggle-button span {
   /*ease=lentement.*/
 }
 nav #side-bar li {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 25px;
   text-transform: uppercase;
   text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "impactLabelReversed", sans-serif;
+  font-weight: 1000;
   border: 2px solid #f9212e;
   transition: all 1s;
   margin-bottom: 10px;
