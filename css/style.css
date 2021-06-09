@@ -147,8 +147,8 @@ header {
 }
 header .porsche {
   background: url("../images/porsche.png") center/cover;
-  width: 120px;
-  height: 100px;
+  width: 110px;
+  height: 90px;
 }
 @media (min-width: 750px) {
   header .porsche {
@@ -182,8 +182,8 @@ header h1 {
 }
 header .harley {
   background: url("../images/Harley-removebg-preview.png") bottom/cover;
-  width: 125px;
-  height: 80px;
+  width: 105px;
+  height: 75px;
   margin-top: 45px;
 }
 @media (min-width: 750px) {
@@ -198,7 +198,7 @@ header .harley {
     height: 130px;
   }
 }
-@media (max-width: 374px) {
+@media (max-width: 359px) {
   header .harley, header .porsche {
     display: none;
   }
@@ -254,7 +254,7 @@ header .harley {
   margin: auto;
   text-transform: uppercase;
   font-weight: 1000;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 @media (min-width: 750px) {
   .presentation p {
@@ -351,7 +351,7 @@ header .harley {
 nav #side-bar {
   position: absolute;
   width: 230px;
-  height: 100%;
+  height: 100vh;
   background: #f9212e;
   left: -300px;
   /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
@@ -360,6 +360,11 @@ nav #side-bar {
   z-index: 4;
   /*La side-bar passe devant tout les élèments.*/
   border: 5px solid white;
+}
+@media (max-height: 600px) {
+  nav #side-bar {
+    height: 100vw;
+  }
 }
 nav #side-bar .toggle-button {
   position: absolute;
@@ -448,6 +453,11 @@ nav #side-bar.active .toggle-button ~ .content {
 section .imageBackground {
   background: url("../images/porscheRougeAvecFond.jpg") center/cover;
   height: 100vh;
+}
+@media (max-height: 600px) {
+  section .imageBackground {
+    height: 100vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
