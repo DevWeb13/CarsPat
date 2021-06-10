@@ -74,7 +74,7 @@ table {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw - 35px));
+    transform: translateX(calc(100vw - 40px));
   }
 }
 @keyframes crashCarOrange {
@@ -271,6 +271,11 @@ header .harley {
 .presentation p .fas, .presentation p .far {
   color: #1f1f1f;
   text-shadow: none;
+  opacity: 0.8;
+}
+.presentation p .fa-crosshairs {
+  position: relative;
+  top: 17px;
 }
 .presentation p a {
   width: max-content;
@@ -281,7 +286,10 @@ header .harley {
   color: #f9212e;
 }
 .presentation p a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+.presentation p a:hover .fas, .presentation p a:hover .far {
+  opacity: 1;
 }
 .presentation p a:focus {
   transform: scale(1);
@@ -329,6 +337,11 @@ header .harley {
   color: #f9212e;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 2px;
+}
+@media (max-width: 380px) {
+  .crashCar p {
+    font-size: 1.3rem;
+  }
 }
 .crashCar .fas {
   font-size: 1rem;
@@ -458,6 +471,107 @@ section .imageBackground {
   section .imageBackground {
     height: 100vw;
   }
+}
+
+/* ********************** FOOTER ************************** */
+.footer-basic {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+  border-top: 3px solid #f9212e;
+  border-bottom: 3px solid #f9212e;
+  position: relative;
+  bottom: 10px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-basic > p {
+  font-family: "birdsOfParadise", Verdana, Geneva, Tahoma, sans-serif;
+  color: #f9212e;
+  text-shadow: 2px 1px 1px #1f1f1f;
+  font-size: 2.5rem;
+  padding-top: 20px;
+}
+@media (min-width: 750px) {
+  .footer-basic > p {
+    font-size: 5rem;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .footer-basic > p {
+    font-size: 7.5rem;
+    padding-top: 40px;
+  }
+}
+.footer-basic footer {
+  margin: 0 2%;
+}
+.footer-basic footer .social {
+  text-align: center;
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+.footer-basic footer .social:hover {
+  transform: scale(1.1);
+}
+.footer-basic footer .social a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+.footer-basic footer .social a:hover {
+  opacity: 0.9;
+}
+.footer-basic footer .social a .fab {
+  color: #3b5998;
+  font-size: 2rem;
+}
+.footer-basic footer ul {
+  font-family: "impactLabelReversed", sans-serif, serif;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: #f9212e;
+  font-weight: 1000;
+}
+.footer-basic footer ul li {
+  padding: 0 10px;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.footer-basic footer ul li:hover {
+  transform: scale(1.1);
+}
+.footer-basic footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.footer-basic footer ul li a:hover {
+  opacity: 1;
+}
+.footer-basic footer ul li a .far, .footer-basic footer ul li a .fas {
+  color: #1f1f1f;
+  opacity: 0.8;
+}
+.footer-basic footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
