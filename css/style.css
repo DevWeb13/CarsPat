@@ -335,7 +335,7 @@ header .harley {
   font-weight: bold;
   margin: 0 0 7px 2.5%;
   color: #f9212e;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Impact", arial;
   letter-spacing: 2px;
 }
 @media (max-width: 380px) {
