@@ -75,8 +75,6 @@ header{
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    //letter-spacing: 1px;
-    
     line-height: 2rem;
     height: 200px;
     font-family: "impactLabelReversed", sans-serif;
@@ -177,8 +175,6 @@ header{
     padding-top: 10px;
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 60%);
-    //background: rgb(255,255,255);
-    //background: linear-gradient(90deg,$primaryColor  15%, $secondaryColor 50%, $thirdColor 85%);
     border-bottom: 3px solid $primaryColor;
     border-top: 3px solid $primaryColor;;
     align-items: center;
@@ -318,13 +314,13 @@ section{
 
 /* ********************** FOOTER ************************** */
 .footer-basic {
-    padding:20px 0;
+    padding:10px 0;
     background-color:#ffffff;
     color:#4b4c4d;
     border-top: 3px solid $primaryColor;
     border-bottom: 3px solid $primaryColor;
     position: relative;
-    bottom: 10px;
+    bottom: 1px;
     z-index: 5;
     display: flex;
     align-items: center;
