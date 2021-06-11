@@ -55,11 +55,15 @@ table {
 
 @font-face {
   font-family: "birdsOfParadise";
-  src: url("../policeBirdsOfParadiseCarsPat/birdsOfParadise.ttf");
+  src: url("../polices/policeBirdsOfParadiseCarsPat/birdsOfParadise.ttf");
 }
 @font-face {
   font-family: "impactLabelReversed";
-  src: url("../policeImpactLabel/Impact_Label_Reversed.ttf");
+  src: url("../polices/policeImpactLabel/Impact_Label_Reversed.ttf");
+}
+@font-face {
+  font-family: "impact";
+  src: url("../polices/policeImpact/impact.ttf");
 }
 @keyframes crashCarText {
   0% {
@@ -335,7 +339,7 @@ header .harley {
   font-weight: bold;
   margin: 0 0 7px 2.5%;
   color: #f9212e;
-  font-family: "Impact", arial;
+  font-family: "impact", sans-serif, serif;
   letter-spacing: 2px;
 }
 @media (max-width: 380px) {
