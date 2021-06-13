@@ -1,0 +1,42 @@
+.crashCar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 60%);
+    border-bottom: 3px solid $primaryColor;
+    border-top: 3px solid $primaryColor;;
+    align-items: center;
+    p{
+        font-size: 1.4rem;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 7px 2.5%;
+        color: $primaryColor;
+        font-family: "impact", sans-serif, serif;
+        letter-spacing: 2px;
+        @media (max-width: 380px) {
+            font-size: 1.3rem;
+        }
+    }
+    .fas{
+        font-size: 1rem;
+    }
+    .fa-car-side{
+        position: absolute;
+        left: 0;
+    }
+    .carColor{
+        color: $secondaryColor;
+        position: absolute;
+        right: 0;
+    }
+    .carColorRed{
+        color: $primaryColor;
+        opacity: 0;
+    }
+}

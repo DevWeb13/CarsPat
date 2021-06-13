@@ -1,0 +1,84 @@
+@import "./layouts/reset";
+@import "./base/fonts";
+@import "./utils/variables";
+@import "./utils/keyframes";
+@import "./utils/mixins";
+
+a{
+    text-decoration: none;
+    color: $secondaryColor;
+}
+/* *********************** HEADER *********************** */
+@import "./layouts/header";
+/* *********************** .PRESENTATIONTEXT ************* */
+.presentationText{
+    text-align: center;
+    font-family: $impactLabelReversed;
+    color: $primaryColor;
+    font-weight: 1000;
+    padding: 20px 20px;
+    border-top: 3px solid $primaryColor;
+}
+/* ********************* NAV ***************************** */
+@import "./layouts/nav";
+/* ********************* SECTION ************************* */
+section{
+    border-top: 3px solid $primaryColor;
+    .imageBackground{
+        background: linear-gradient(90deg, $primaryColorLight 15%, $secondaryColorLight 50%, $thirdColorLight 85%);;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0 0px 0;
+
+        position: relative;
+        @media (max-height: 600px) {
+            height: 100vw;
+        }
+        h1{
+            color: $primaryColor;
+            font-size: 3rem;
+            font-family: $impactLabelReversed;
+            font-weight: 1000;
+            position:absolute;
+            right: 10%;
+        }
+        &__vignettes{
+            height: 125px;
+            width: 150px;
+            margin-bottom: 10px;
+            border: 5px solid $primaryColor;
+            background: $thirdColor;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 10px 5px 10px white;
+            &--picture{
+                height: 100%;
+            }
+            .arriereCasse{
+                background: url("../images/mercedes/arriereCasse.png") center/cover;
+                
+            }
+            .avantCasse{
+                background: url("../images/mercedes/avantCasse.png") center/cover;
+                
+            }
+            .arriereNeuf{
+                background: url("../images/mercedes/arriereNeuf.png") center/cover;
+                
+            }
+            .avantNeuf{
+                background: url("../images/mercedes/avantNeuf.png") center/cover;
+    
+            }
+            .coteNeuf{
+                background: url("../images/mercedes/coteNeuf.png")center/cover
+            }
+        }
+        
+    }
+}
+
+/* ********************** FOOTER ************************** */
+@import "./layouts/footer";

@@ -1,0 +1,9 @@
+section{
+    .imageBackground{
+        background: url("../images/porscheRougeAvecFond.jpg") center/cover ;
+        height: 100vh;
+        @media (max-height: 600px) {
+            height: 100vw;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+nav{
+    #side-bar{
+        position: absolute;
+        width: 230px;
+        height: 100vh;
+        background: $primaryColor;
+        left: -300px;   /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
+        transition: .5s ease-out;/*Affiche side-bar en 0.5s (ease-out=lent vers la fin).*/
+        z-index: 4;/*La side-bar passe devant tout les élèments.*/
+        border: 5px solid $thirdColor;
+        @media (max-height: 600px) {
+            height: 100vw;
+        }
+        .toggle-button{
+            position: absolute;
+            top: 30px;
+            left: 310px;/*Place le bouton au bon endroit.*/
+            cursor: pointer;
+            height: 70px;
+            width: 70px;
+            @media (min-width: 750px) {
+                   width: 90px;
+                   height: 90px; 
+            }
+            @media (min-width: 1000px) {
+                width: 110px;
+                height: 110px;
+            }
+            span{/*Il y a 3 <span> qui permettent de créer la forme du bouton.(hamburger)*/
+                width: 60px;
+                height: 10px;
+                border-radius: 10px;
+                background: $primaryColor;
+                display: block;
+                margin-top: 4px;/*Permet de 'decoller' les 3 <span> afin de creer les 3 traits.*/
+                transition: 0.5s ease;/*ease=lentement.*/
+                border: 5px solid $thirdColor;
+                @media (min-width: 750px) {
+                    width: 80px;
+                    height: 15px;
+                    margin-top: 5px;
+                    border-radius: 15px;
+                }
+                @media (min-width: 1000px) {
+                    width: 100px;
+                    height: 20px;
+                    margin-top: 6px;
+                    border-radius: 20px;
+                }
+            }
+        }
+        li{
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 25px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: "impactLabelReversed", sans-serif;
+            font-weight: 1000;
+            border: 2px solid $primaryColor;
+            transition: all 1s;
+            margin-bottom: 10px;
+            transform: scale(1);
+            &:hover{
+                background: $thirdColor;
+                border: 2px solid $secondaryColor;
+                border-radius: 50%;
+                transform: scale(1.05);
+                a{
+                    color: $secondaryColor;
+                }
+            }
+            a{
+                color: $thirdColor;
+                transition: all 1s;
+            }
+        }
+        .porscheBleu{
+            background: url("../images/porscheBleu-removebg-preview.png") center/cover;
+            height: 100px;
+            width: 200px;
+            margin: auto;
+            font-size: 0.5rem;
+        }
+    }   
+    #side-bar.active{
+        left: 0;/*Quand la class='active' est activé on annule le 'left: -300px;' ce qui permet d'afficher la side-bar.*/
+        .toggle-button{
+            top: 2.8rem;
+            left: 235px;
+            span{
+                position: absolute;
+            }
+            span:nth-child(1){
+                transform: rotate(45deg);/*Permet de tourner la barre du haut de 45 degrés quand on active la Sidebar.*/
+            }
+            span:nth-child(2){
+                opacity: 0;/*Permet de faire disparaitre la barre du milieu quand on active la Sidebar.*/
+            }
+            span:nth-child(3){
+                transform: rotate(-45deg);/*Permet de tourner la barre du bas de -45 degrés quand on active la Sidebar.*/
+            }
+            ~ .content{/*Contenu de la page*/
+                opacity: 0.3;/*Sombre le contenu de la page quand la class='active' est activée.*/
+            }
+        }
+    }
+}
