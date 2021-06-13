@@ -1,0 +1,93 @@
+.presentation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 2rem;
+    height: 200px;
+    font-family: "impactLabelReversed", sans-serif;
+    color: $primaryColor;
+    border-top: 3px solid $primaryColor;
+    &:hover{
+        + .crashCar{
+            @include crashCarAnimations;
+        }
+        a, i{
+            animation: buzzOut 0.4s  1s 1  backwards;
+        }
+    }
+    .leftWideBand{
+        clip-path: polygon(0 15%, 100% 100%, 30% 100%, 0 50%);
+        background: $primaryColor;
+        height: 100%;
+        width: 30%;
+        position: relative;
+        @media  (max-width: 600px){
+            display: none;
+        }
+        .leftThinBand{
+            clip-path: polygon(0 37%, 43% 100%, 40% 100%, 0 40%);
+            background: white;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+    p{
+        margin: auto;
+        text-transform: uppercase;
+        font-weight: 1000;
+        font-size: 1.1rem;
+        @media (min-width: 750px) {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+        }
+        @media (min-width: 1000px) {
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+        }
+        .fas, .far{
+            color: $secondaryColor;
+            text-shadow: none;
+            opacity: 0.8;
+        }
+        .fa-crosshairs{
+            position: relative;
+            top: 17px;
+        }
+        a{
+            width: max-content;
+            margin: auto;
+            display: block;
+            transform: scale(1);
+            transition: transform 0.3s;
+            color: $primaryColor;
+            &:hover{
+                transform: scale(1.1);
+                .fas, .far{
+                    opacity: 1;
+                }
+            }
+            &:focus{
+                transform: scale(1);
+            }
+        }
+    }
+    .rightWideBand{
+        clip-path: polygon(100% 50%, 100% 70%, 70% 100%, 0 100%);
+        background: $primaryColor;
+        height: 100%;
+        width: 30%;
+        position: relative;
+        @media  (max-width: 600px){
+            display: none;
+        }
+        .rightThinBand{
+            clip-path: polygon(100% 63%, 100% 65%, 64% 100%, 60% 100%);
+            background: white;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+}
