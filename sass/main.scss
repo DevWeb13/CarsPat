@@ -230,16 +230,37 @@ nav{
             top: 30px;
             left: 310px;/*Place le bouton au bon endroit.*/
             cursor: pointer;
-            height: 50px;
-            width: 50px;
+            height: 70px;
+            width: 70px;
+            @media (min-width: 750px) {
+                   width: 90px;
+                   height: 90px; 
+            }
+            @media (min-width: 1000px) {
+                width: 110px;
+                height: 110px;
+            }
             span{/*Il y a 3 <span> qui permettent de créer la forme du bouton.(hamburger)*/
                 width: 60px;
                 height: 10px;
-                border-radius: 5px;
+                border-radius: 10px;
                 background: $primaryColor;
                 display: block;
                 margin-top: 4px;/*Permet de 'decoller' les 3 <span> afin de creer les 3 traits.*/
                 transition: 0.5s ease;/*ease=lentement.*/
+                border: 5px solid $thirdColor;
+                @media (min-width: 750px) {
+                    width: 80px;
+                    height: 15px;
+                    margin-top: 5px;
+                    border-radius: 15px;
+                }
+                @media (min-width: 1000px) {
+                    width: 100px;
+                    height: 20px;
+                    margin-top: 6px;
+                    border-radius: 20px;
+                }
             }
         }
         li{
