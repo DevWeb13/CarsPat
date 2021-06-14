@@ -3,7 +3,8 @@ nav{
         position: absolute;
         width: 230px;
         height: 100vh;
-        max-height: 740px;
+        //max-height: 740px;
+        
         background: $primaryColor;
         left: -300px;   /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
         transition: .5s ease-out;/*Affiche side-bar en 0.5s (ease-out=lent vers la fin).*/
@@ -101,9 +102,10 @@ nav{
             span:nth-child(3){
                 transform: rotate(-45deg);/*Permet de tourner la barre du bas de -45 degrés quand on active la Sidebar.*/
             }
-            ~ .content{/*Contenu de la page*/
-                opacity: 0.3;/*Sombre le contenu de la page quand la class='active' est activée.*/
-            }
+            
         }
-    }
+        ~ .content{/*Contenu de la page*/
+            opacity: 0.3;/*Sombre le contenu de la page quand la class='active' est activée.*/
+        }
+    } 
 }
