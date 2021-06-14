@@ -3,6 +3,7 @@ nav{
         position: absolute;
         width: 230px;
         height: 100vh;
+        max-height: 740px;
         background: $primaryColor;
         left: -300px;   /*Permet de faire disparaitre la side-bar sur la gauche de l'ecran.*/
         transition: .5s ease-out;/*Affiche side-bar en 0.5s (ease-out=lent vers la fin).*/
