@@ -12,15 +12,71 @@ a{
 @import "./layouts/header";
 /* *********************** .PRESENTATIONTEXT ************* */
 .presentationText{
+    border-top: 3px solid $primaryColor;
+    padding: 20px 10%;
+    position: relative;
+    background: url("../images/bois/vieux-fond-bois-blanc-vintage_23-2148327722.jpg") center/cover ;
+    min-height: 163px;
+    
+    .vis{
+        clip-path: circle(50% at 50% 50%);
+        height: $sizeVis;
+        width: $sizeVis;
+        background-color: $secondaryColor;
+       position: absolute;
+       display: flex;
+        right: 94%;
+       top: 15px;
+       transform: rotate(15deg);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       box-shadow: 1px 1px 1px $secondaryColor;
+        &__croix{
+            position: absolute;
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+            background: $thirdColor;
+            height: 70%;
+            width: 70%;
+            
+        }
+        
+    }
+    .N2{
+        position: absolute;
+        right: 5%;
+        top: 8px;
+        transform: rotate(30deg);
+    }
+    .N3{
+        position: absolute;
+        right: 4%;
+        top: 88%;
+        transform: rotate(45deg);
+    }
+    .N4{
+        position: absolute;
+        right: 92%;
+        top: 85%;
+        transform: rotate(60deg);
+    }
+    p{
     text-align: center;
     font-family: $impactLabelReversed;
     color: $primaryColor;
     font-weight: 1000;
-    padding: 20px 20px;
-    border-top: 3px solid $primaryColor;
+    font-size: 1.5rem
+    
+    }
 }
 /* ********************* NAV ***************************** */
 @import "./layouts/nav";
+nav{
+    #sideBar{
+        max-height: 740px;
+    }
+}
+
 /* ********************* SECTION ************************* */
 section{
     border-top: 3px solid $primaryColor;
