@@ -13,9 +13,9 @@ a{
 /* *********************** .PRESENTATIONTEXT ************* */
 .presentationText{
     border-top: 3px solid $primaryColor;
-    padding: 20px 10%;
+    padding: 20px 15%;
     position: relative;
-    background: url("../images/tole/istockphoto-638414358-612x612.jpg") center/cover ;
+    background: url("../images/tole/istockphoto-638414358-612x612.jpg") center/cover;
     min-height: 163px;
     
     .vis{
@@ -62,17 +62,19 @@ a{
     }
     p{
     text-align: center;
-    font-family: $impactLabelReversed;
-    color: $primaryColor;
+    font-family: $impactPolicy;
+    color: $primaryColorLight;
     font-weight: 1000;
-    font-size: 1.5rem
-    
+    font-size: 1.5rem;
+    text-shadow: 2px 0 0 $secondaryColor, -2px 0 0 $secondaryColor, 0 2px 0 $secondaryColor, 0 -2px 0 $secondaryColor, 1px 1px $secondaryColor, -1px -1px 0 $secondaryColor, 1px -1px 0 $secondaryColor, -1px 1px 0 $secondaryColor;
+    line-height: 1.5;
+    letter-spacing: 2px;
     }
 }
 /* ********************* NAV ***************************** */
 @import "./layouts/nav";
 nav{
-    #sideBar{
+    sideBar{
         max-height: 740px;
     }
 }
