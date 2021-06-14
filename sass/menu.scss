@@ -24,6 +24,7 @@ a{
 /* ********************* SECTION ************************* */
 section{
     border-top: 3px solid $primaryColor;
+    max-height: 740px;
     .imageBackground{
         background: linear-gradient(90deg, $primaryColorLight 15%, $secondaryColorLight 50%, $thirdColorLight 85%);;
         height: 100vh;
