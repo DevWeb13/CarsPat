@@ -102,7 +102,6 @@ nav{
             span:nth-child(3){
                 transform: rotate(-45deg);/*Permet de tourner la barre du bas de -45 degrés quand on active la Sidebar.*/
             }
-            
         }
         ~ .content{/*Contenu de la page*/
             opacity: 0.3;/*Sombre le contenu de la page quand la class='active' est activée.*/
