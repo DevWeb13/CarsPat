@@ -16,11 +16,11 @@
         text-shadow: 2px 1px 1px $secondaryColor;
         font-size: 2.5rem;
         padding-top: 20px;
-        @media (min-width: 700px) {
+        @include tablette {
             font-size: 5rem;
             padding-top: 30px;
         }
-        @media (min-width: 1000px) {
+        @include desktop {
             font-size: 7.5rem;
             padding-top: 40px;
         }
