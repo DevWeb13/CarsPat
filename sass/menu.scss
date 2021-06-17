@@ -11,14 +11,15 @@ a{
 }
 /* *********************** HEADER *********************** */
 @import "./layouts/header";
+
 /* *********************** .PRESENTATIONTEXT ************* */
 .presentationText{
     border-top: 3px solid $primaryColor;
-    padding: 20px 15%;
     position: relative;
-    background: url("../images/tole/istockphoto-638414358-612x612.jpg") center/cover;
     min-height: 163px;
-    
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     .vis{
         clip-path: circle(50% at 50% 50%);
         height: $sizeVis;
@@ -39,9 +40,7 @@ a{
             background: $thirdColor;
             height: 70%;
             width: 70%;
-            
         }
-        
     }
     .N2{
         position: absolute;
@@ -61,15 +60,23 @@ a{
         top: 85%;
         transform: rotate(60deg);
     }
+    img{
+        position: absolute;
+        width: 100vw;
+        z-index: -1;
+        height: 100%;
+        object-fit: cover;
+    }
     p{
-    text-align: center;
-    font-family: $impactPolicy;
-    color: $primaryColorLight;
-    font-weight: 1000;
-    font-size: 1.5rem;
-    text-shadow: 2px 0 0 $secondaryColor, -2px 0 0 $secondaryColor, 0 2px 0 $secondaryColor, 0 -2px 0 $secondaryColor, 1px 1px $secondaryColor, -1px -1px 0 $secondaryColor, 1px -1px 0 $secondaryColor, -1px 1px 0 $secondaryColor;
-    line-height: 1.5;
-    letter-spacing: 2px;
+        text-align: center;
+        font-family: $impactPolicy;
+        color: $primaryColorLight;
+        font-weight: 1000;
+        font-size: 1.5rem;
+        text-shadow: 2px 0 0 $secondaryColor, -2px 0 0 $secondaryColor, 0 2px 0 $secondaryColor, 0 -2px 0 $secondaryColor, 1px 1px $secondaryColor, -1px -1px 0 $secondaryColor, 1px -1px 0 $secondaryColor, -1px 1px 0 $secondaryColor;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        margin: 20px 10%;
     }
 }
 /* ********************* NAV ***************************** */
@@ -79,7 +86,7 @@ a{
 section{
     border-top: 3px solid $primaryColor;
     position: relative;
-    .imageBackground{
+    .imageBackground {
         background: linear-gradient(90deg, $primaryColorLight 15%, $secondaryColorLight 50%, $thirdColorLight 85%);
         display: flex;
         flex-direction: column;
@@ -90,13 +97,14 @@ section{
         @media (max-height: 600px) {
             height: 100vw;
         }
-        h1{
+        h2{
             color: $primaryColor;
             font-size: 3rem;
             font-family: $impactLabelReversed;
             font-weight: 1000;
             position:absolute;
             right: 10%;
+            top: 35px;
         }
         &__vignettes{
             height: 125px;
@@ -107,31 +115,45 @@ section{
             border-radius: 50%;
             position: relative;
             box-shadow: 10px 5px 10px white;
+            img{
+                position: relative;
+                width: 100%;
+            }
+            .img1Peinture{
+                top: 15px;
+                right: 10px;
+            }
+            .img2Peinture{
+                width: 120%;
+                right: 13px;
+            }
+            .img4Peinture{
+                width: 90%;
+                left: 10px;
+            }
+            .img5Peinture{
+                width: 115%;
+            }
+            .img1carrosserie{
+                width: 110%;
+            }
+            .img2carrosserie{
+                width: 120%;
+                right: 20px;
+                bottom: 7px;
+            }
+            .img3carrosserie{
+                width: 115%;
+                right: 20px;
+            }
+            .img4carrosserie{
+                width: 130%;
+                bottom: 24px;
+                right: 22px;
+            }
+
             
-            &--picture{
-                height: 100%;
-            }
-            .arriereCasse{
-                background: url("../images/mercedes/arriereCasse.png") center/cover;
-                
-            }
-            .avantCasse{
-                background: url("../images/mercedes/avantCasse.png") center/cover;
-                
-            }
-            .arriereNeuf{
-                background: url("../images/mercedes/arriereNeuf.png") center/cover;
-                
-            }
-            .avantNeuf{
-                background: url("../images/mercedes/avantNeuf.png") center/cover;
-    
-            }
-            .coteNeuf{
-                background: url("../images/mercedes/coteNeuf.png")center/cover
-            }
         }
-        
     }
 }
 
