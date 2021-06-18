@@ -97,6 +97,16 @@ section{
         @media (max-height: 600px) {
             height: 100vw;
         }
+        @include tablette{
+            flex-direction: row;
+            padding: 10px 100px 0 110px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include desktop{
+            padding-right: 150px;
+
+        }
         h2{
             color: $primaryColor;
             font-size: 3rem;
@@ -113,8 +123,18 @@ section{
             border: 5px solid $primaryColor;
             background: $thirdColor;
             border-radius: 50%;
-            position: relative;
+            //position: relative;
             box-shadow: 10px 5px 10px white;
+            @include tablette{
+                height: 150px;
+                width: 175px;
+                margin-right: 58px;
+            }
+            @include desktop{
+                height: 225px;
+                width: 250px;
+                
+            }
             img{
                 position: relative;
                 width: 100%;
@@ -126,6 +146,9 @@ section{
             .img2Peinture{
                 width: 120%;
                 right: 13px;
+                @include desktop{
+                    right: 20px;
+                }
             }
             .img4Peinture{
                 width: 90%;
@@ -141,15 +164,24 @@ section{
                 width: 120%;
                 right: 20px;
                 bottom: 7px;
+                @include desktop{
+                    right: 30px;
+                }
             }
             .img3carrosserie{
                 width: 115%;
                 right: 20px;
+                @include desktop{
+                    right: 30px;
+                }
             }
             .img4carrosserie{
                 width: 130%;
                 bottom: 24px;
                 right: 22px;
+                @include desktop{
+                    right: 35px;
+                }
             }
 
             
