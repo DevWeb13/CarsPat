@@ -19,24 +19,29 @@
         color: $primaryColor;
         font-family: "impact", sans-serif, serif;
         letter-spacing: 2px;
+        position: absolute;
         @media (max-width: 380px) {
             font-size: 1.3rem;
         }
     }
     .fas{
         font-size: 1rem;
+        //display: block;
     }
     .fa-car-side{
-        position: absolute;
-        left: 0;
+        //position: absolute;
+        //left: 0;
+        flex-grow: 2;
     }
     .carColor{
         color: $secondaryColor;
-        position: absolute;
+        //position: absolute;
         right: 0;
     }
     .carColorRed{
         color: $primaryColor;
         opacity: 0;
+        position: absolute;
+        right: 0;
     }
 }

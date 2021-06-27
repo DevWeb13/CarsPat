@@ -10,10 +10,10 @@
 
 @keyframes crashCarBlack {
     0%{
-        transform: translateX(0);
+        transform: translateX(0px);
     }
     100%{
-        transform: translateX(calc(100vw - 40px));
+        transform: translateX(calc(100% - 20px));
     }
 }
 
