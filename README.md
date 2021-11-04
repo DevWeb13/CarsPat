@@ -2,10 +2,10 @@
 
 @author: [DevWeb13](https://twitter.com/DeveloppementW1)
 
-Projet personnel: Site vitrine pour une carrosserie.
+Personal project: Showcase site for a bodywork.
 
-HTML-CSS-SASS 
+HTML-CSS-SASS-JS
 
-# [SITE FINAL](https://devweb13.github.io/CarsPat/)
+# [FINAL SITE](https://devweb13.github.io/CarsPat/)
 
 
